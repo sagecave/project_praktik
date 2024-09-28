@@ -1,0 +1,52 @@
+
+@layer reset, global, components, overrides;
+
+@import url("../css/reset.css") layer(reset);
+
+@layer global {
+
+:root{
+    --color_lightGrey: #C4C2C2;
+    --color_darkGrey: #767676;
+    --color_lightWhite: #E7E5E5;
+    --header-1: clamp(1.5625rem, 0.8851rem + 2.8902vw, 3.125rem);
+    --header-2: clamp(1.3021rem, 0.7828rem + 2.2158vw, 2.5rem);
+    --header-3: clamp(1.0851rem, 0.6884rem + 1.6924vw, 2rem);
+    --header-4: clamp(0.9042rem, 0.6026rem + 1.287vw, 1.6rem);
+    --header-5: clamp(0.7535rem, 0.5253rem + 0.9738vw, 1.28rem);
+    --header-6: clamp(0.6279rem, 0.4562rem + 0.7326vw, 1.024rem);
+
+
+}
+.flow > *+* {
+    margin-block-start: var(--flow-space, 1rem);
+}
+h1,h2,h3,h4{
+    font-family: "Oswald";
+}
+
+h1{
+    font-size: var(--header-1);
+    color: var(--color_lightWhite);
+}
+h2{
+    font-size: var(--header-2);
+    color: var(--color_lightWhite);
+}
+h3{
+    font-size: var(--header-3);
+    color: var(--color_lightWhite);
+}
+p{
+    color: var(--color_lightWhite);
+    font-family: "Oxanium";
+}
+@font-face {
+    font-family: "Oswald";
+    src: url(../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+  }
+@font-face {
+    font-family: "Oxanium";
+    src: url(../assets/fonts/Oxanium/Oxanium-VariableFont_wght.ttf);
+  }
+}

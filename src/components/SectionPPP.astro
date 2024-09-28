@@ -1,0 +1,49 @@
+---
+import Character from "./Character.astro";
+import Profil from "./Profil.astro";
+import Content from "./Content.astro";
+import Contact from "./Contact.astro";
+import Skills from "./Skills.astro";
+import Hello from "./Hello.astro";
+---
+
+<section>
+  <div class="grid_1-1 flow inline_container fit">
+    <Hello />
+    <Profil />
+
+    <Character />
+    <Content />
+
+    <Skills />
+    <Contact />
+  </div>
+</section>
+<style>
+  @media screen and (width > 800px) {
+    section {
+      container-type: inline-size;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .fit {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: 140px 1fr 1fr;
+      gap: 1.3rem;
+      margin-top: 4rem;
+    }
+  }
+
+  .profil_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .inline_container {
+    > * {
+      container-type: inline-size;
+    }
+  }
+</style>

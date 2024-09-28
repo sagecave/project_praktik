@@ -20,7 +20,7 @@ import Hello from "./Hello.astro";
   </div>
 </section>
 <style>
-  @media screen and (width > 800px) {
+  @media screen and (min-width: 800px) {
     section {
       container-type: inline-size;
       display: grid;
@@ -30,7 +30,7 @@ import Hello from "./Hello.astro";
       grid-column: 1/-1;
       display: grid;
       grid-template-columns: subgrid;
-      grid-template-rows: 140px 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
       gap: 1.3rem;
       margin-top: 4rem;
     }

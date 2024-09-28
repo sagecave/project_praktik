@@ -1,5 +1,8 @@
 ---
-
+import { Image } from "astro:assets";
+import linkedInSvg from "../assets/icons/linkedin.svg";
+import mailSvg from "../assets/icons/mail.svg";
+import phoneSvg from "../assets/icons/phone.svg";
 ---
 
 <div class="caotact_holder">
@@ -8,12 +11,14 @@
 
     <div class="links">
       <a class="linkedin" href="https://www.linkedin.com/in/andreas-amadeu-568242260/">
-        <img src="/src/assets/icons/linkedin.svg" alt="" />
+        <Image src={linkedInSvg} alt="/" />
       </a>
       <a class="mail" href="mailto:Andreassage@gmail.com">
+        <Image src={mailSvg} alt="/" />
         <img src="/src/assets/icons/mail.svg" alt="" />
       </a>
       <a class="phone" href="tel:22507898">
+        <Image src={phoneSvg} alt="/" />
         <img src="/src/assets/icons/phone.svg" alt="" />
       </a>
     </div>

@@ -1,11 +1,12 @@
 ---
-
+import { Image } from "astro:assets";
+import testPic from "../assets/images/testPic.png";
 ---
 
 <div class="card_holder">
   <div class="card_container">
     <div class="card">
-      <img src="/src/assets/images/testPic.png" alt="" />
+      <Image src={testPic} alt="/" />
       <div class="andreas"><h2>AN<span>DRE</span>AS</h2></div>
       <div class="hello_andreas"><h2>HEL<span>LO!</span></h2></div>
     </div>

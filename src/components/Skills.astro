@@ -1,20 +1,29 @@
 ---
-
+import { Image } from "astro:assets";
+import htmlPic from "../assets/images/html.png";
+import cssPic from "../assets/images/css.png";
+import jsPic from "../assets/images/js.png";
+import reactPic from "../assets/images/react.png";
+import nextPic from "../assets/images/next.png";
+import astroPic from "../assets/images/astro.png";
+import githubPic from "../assets/images/github.png";
+import figmaPic from "../assets/images/figma.png";
+import netlifyPic from "../assets/images/netlify.png";
 ---
 
 <div class="skill_holder">
   <div class="container">
     <h2>Skilles</h2>
     <div class="skilles_container">
-      <div class="skilles"><img src="/src/assets/images/html.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/css.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/js.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/react.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/next.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/astro.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/github.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/figma.png" alt="" /></div>
-      <div class="skilles"><img src="/src/assets/images/netlify.png" alt="" /></div>
+      <div class="skilles"><Image src={htmlPic} alt="/" /></div>
+      <div class="skilles"><Image src={cssPic} alt="/" /></div>
+      <div class="skilles"><Image src={jsPic} alt="/" /></div>
+      <div class="skilles"><Image src={reactPic} alt="/" /></div>
+      <div class="skilles"><Image src={nextPic} alt="/" /></div>
+      <div class="skilles"><Image src={astroPic} alt="/" /></div>
+      <div class="skilles"><Image src={githubPic} alt="/" /></div>
+      <div class="skilles"><Image src={figmaPic} alt="/" /></div>
+      <div class="skilles"><Image src={netlifyPic} alt="/" /></div>
     </div>
   </div>
 </div>
@@ -51,7 +60,7 @@
       background: rgba(118, 118, 118, 0.18);
       border-radius: 30px;
       h2 {
-        padding: 0rem 2.7rem;
+        padding: 0.5rem 2.7rem 0 2rem;
       }
     }
   }

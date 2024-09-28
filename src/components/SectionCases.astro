@@ -1,25 +1,31 @@
 ---
-
+import { Image } from "astro:assets";
+import testPic from "../assets/images/affiliatedCase.jpg";
 ---
 
 <section>
   <h2>MY PROJECTS</h2>
   <div class="list">
-    <a class="item" href="#"><div><img src="/src/assets/images/affiliatedCase.jpg" alt="test" /></div></a>
-    <a class="item" href="#"><div><img src="/src/assets/images/affiliatedCase.jpg" alt="test" /></div></a>
-    <a class="item" href="#"><div><img src="/src/assets/images/affiliatedCase.jpg" alt="test" /></div></a>
-    <a class="item" href="#"><div><img src="/src/assets/images/affiliatedCase.jpg" alt="test" /></div></a>
-    <a class="item" href="#"><div><img src="/src/assets/images/affiliatedCase.jpg" alt="test" /></div></a>
+    <a class="item" href="https://andreassage.dk/04_animation/Website/index.html"><div><Image src={testPic} alt="/" /></div></a>
+    <a class="item" href="https://andreassage.dk/bak_website2/index.html"><div><Image src={testPic} alt="/" /></div></a>
+    <a class="item" href="file:///Users/andreassageamadeu/Desktop/kea/portfolio/index.html"><div><Image src={testPic} alt="/" /></div></a>
+    <a class="item" href="https://affiliated.netlify.app/"><div><Image src={testPic} alt="/" /></div></a>
+    <a class="item" href="https://vildmadsanke.netlify.app/"><div><Image src={testPic} alt="/" /></div></a>
   </div>
 </section>
 
 <style>
+  img {
+    border-radius: 30px;
+    width: clamp(2.625rem, -2.4122rem + 17.2254vw, 11.9375rem);
+  }
   .list {
     transform-style: preserve-3d;
     transform: perspective(1000px);
     display: flex;
     flex-wrap: wrap;
-    gap: 0.1rem;
+    justify-content: center;
+    gap: 2rem;
   }
   .list .item {
     transition: 0.5s;

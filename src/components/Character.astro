@@ -1,17 +1,18 @@
 ---
-
+import { Image } from "astro:assets";
+import testPic from "../assets/images/next.png";
 ---
 
 <div class="fitContent">
   <div class="characterBox_container">
     <button class="charcterFirst" type="button">
-      <img src="/src/assets/images/testPic.png" alt="" />
+      <Image src={testPic} alt="/" />
     </button>
     <button class="charcterSecond" type="button">
-      <img src="/src/assets/images/testPic.png" alt="" />
+      <Image src={testPic} alt="/" />
     </button>
     <button class="charcterThird" type="button">
-      <img src="/src/assets/images/testPic.png" alt="" />
+      <Image src={testPic} alt="/" />
     </button>
   </div>
 </div>
@@ -33,6 +34,8 @@
   }
   .fitContent {
     height: fit-content;
+  }
+  button {
   }
 
   .characterBox_container {
@@ -63,11 +66,6 @@
       border-radius: 30px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(118, 118, 118, 0.3);
-
-      img {
-        width: 65%;
-        object-fit: cover;
-      }
     }
   }
 

@@ -5,6 +5,18 @@ import Content from "./Content.astro";
 import Contact from "./Contact.astro";
 import Skills from "./Skills.astro";
 import Hello from "./Hello.astro";
+// const data_url = "https://zhpowqjqhixvquyiedee.supabase.co/rest/v1/praktikAndreasInfo";
+// const data_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpocG93cWpxaGl4dnF1eWllZGVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc1NTAwODUsImV4cCI6MjA0MzEyNjA4NX0.d2Adcn4bHP-lAPB1nFoCN8y-fxznDtId5LR41MA1xSI";
+// const data = await fetch(data_url, {
+//   method: "GET",
+//   headers: {
+//     apikey: data_key,
+//   },
+// }).then((res) => res.json());
+
+// const dataOne = data.slice(0, 1);
+
+// const employeeData = await fetch(data_url).then((res) => res.json());
 ---
 
 <section>
@@ -47,3 +59,26 @@ import Hello from "./Hello.astro";
     }
   }
 </style>
+<script>
+  const first_ch = document.querySelector(".charcterFirst");
+  const secound_ch = document.querySelector(".charcterSecond");
+  const third_ch = document.querySelector(".charcterThird");
+  const h2_ch = document.querySelector(".contact_h2");
+
+  first_ch.addEventListener("click", fristButton);
+
+  function fristButton() {
+    h2_ch.innerHTML = "lol";
+    console.log(h2_ch);
+  }
+  secound_ch.addEventListener("click", secoundButton);
+
+  function secoundButton() {
+    console.log("Eow");
+  }
+  third_ch.addEventListener("click", thirdButton);
+
+  function thirdButton() {
+    console.log("Bro");
+  }
+</script>

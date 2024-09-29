@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+
 import linkedInSvg from "../assets/icons/linkedin.svg";
 import mailSvg from "../assets/icons/mail.svg";
 import phoneSvg from "../assets/icons/phone.svg";
@@ -7,19 +8,17 @@ import phoneSvg from "../assets/icons/phone.svg";
 
 <div class="caotact_holder">
   <div class="contact_container">
-    <h2>Contact me</h2>
+    <h2 class="contact_h2">Contact me</h2>
 
     <div class="links">
-      <a class="linkedin" href="https://www.linkedin.com/in/andreas-amadeu-568242260/">
+      <a class="linkedin" target="”_blank”" href="https://www.linkedin.com/in/andreas-amadeu-568242260/">
         <Image src={linkedInSvg} alt="/" />
       </a>
-      <a class="mail" href="mailto:Andreassage@gmail.com">
+      <a class="mail" target="”_blank”" href="mailto:Andreassage@gmail.com">
         <Image src={mailSvg} alt="/" />
-        <img src="/src/assets/icons/mail.svg" alt="" />
       </a>
-      <a class="phone" href="tel:22507898">
+      <a class="phone" target="”_blank”" href="tel:22507898">
         <Image src={phoneSvg} alt="/" />
-        <img src="/src/assets/icons/phone.svg" alt="" />
       </a>
     </div>
   </div>
@@ -44,7 +43,7 @@ import phoneSvg from "../assets/icons/phone.svg";
     a {
       background-color: rgba(118, 118, 118, 0.18);
       border-radius: 30px;
-      padding: 2.4rem 1.5rem;
+      padding: 2.2rem 1.5rem;
     }
     a:hover {
       background-color: rgba(118, 118, 118, 0.307);
@@ -70,9 +69,13 @@ import phoneSvg from "../assets/icons/phone.svg";
       flex-wrap: wrap;
     }
     a {
-      border-radius: 30px;
+      border-radius: 16px;
       border: solid var(--color_darkGrey) 2px;
       padding: 0.5rem 1.5rem;
+    }
+    img {
+      width: 1.34594rem;
+      height: 1.34594rem;
     }
   }
   .contact_container {

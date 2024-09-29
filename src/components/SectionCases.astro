@@ -1,23 +1,34 @@
 ---
 import { Image } from "astro:assets";
-import testPic from "../assets/images/affiliatedCase.jpg";
+import affiliated from "../assets/images/affiliatedCase.jpg";
+import vlm from "../assets/images/vildMedMad.jpg";
+import dragonNest from "../assets/images/dragonNest.jpg";
+import profileP from "../assets/images/portfolie.jpg";
+import bakSandwich from "../assets/images/bakSandwich.jpg";
 ---
 
 <section>
   <h2>MY PROJECTS</h2>
   <div class="list">
-    <a class="item" href="https://andreassage.dk/04_animation/Website/index.html"><div><Image src={testPic} alt="/" /></div></a>
-    <a class="item" href="https://andreassage.dk/bak_website2/index.html"><div><Image src={testPic} alt="/" /></div></a>
-    <a class="item" href="file:///Users/andreassageamadeu/Desktop/kea/portfolio/index.html"><div><Image src={testPic} alt="/" /></div></a>
-    <a class="item" href="https://affiliated.netlify.app/"><div><Image src={testPic} alt="/" /></div></a>
-    <a class="item" href="https://vildmadsanke.netlify.app/"><div><Image src={testPic} alt="/" /></div></a>
+    <a class="item" target="”_blank”" href="https://andreassage.dk/04_animation/Website/index.html"><div><Image src={dragonNest} alt="/" /></div></a>
+    <a class="item" target="”_blank”" href="https://andreassage.dk/bak_website2/index.html"><div><Image src={bakSandwich} alt="/" /></div></a>
+    <a class="item" target="”_blank”" href="https://andreassage.dk/"><div><Image src={profileP} alt="/" /></div></a>
+    <a class="item" target="”_blank”" href="https://affiliated.netlify.app/"><div><Image src={affiliated} alt="/" /></div></a>
+    <a class="item" target="”_blank”" href="https://vildmadsanke.netlify.app/"><div><Image src={vlm} alt="/" /></div></a>
   </div>
 </section>
 
 <style>
-  img {
-    border-radius: 30px;
-    width: clamp(2.625rem, -2.4122rem + 17.2254vw, 11.9375rem);
+  section {
+    grid-column: full;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+  }
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    grid-column: content;
   }
   .list {
     transform-style: preserve-3d;
@@ -26,10 +37,11 @@ import testPic from "../assets/images/affiliatedCase.jpg";
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    grid-column: full;
   }
   .list .item {
     transition: 0.5s;
-    filter: brightness(0.2);
+    filter: brightness(0.3);
   }
 
   .list .item:hover {
@@ -60,5 +72,10 @@ import testPic from "../assets/images/affiliatedCase.jpg";
   .list .item:has(+ * + * + *:hover) {
     filter: brightness(0.2);
     transform: translateZ(30px) rotateY(-10deg);
+  }
+
+  img {
+    border-radius: 30px;
+    width: fit-content;
   }
 </style>

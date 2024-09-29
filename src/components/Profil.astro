@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import testPic from "../assets/images/testPic.png";
+import testPic from "../assets/images/andreasFoto.png";
 ---
 
 <div class="card_holder">
@@ -14,6 +14,30 @@ import testPic from "../assets/images/testPic.png";
 </div>
 
 <style>
+  @keyframes zoomInAndOut {
+    0% {
+      transform: scale(1.1);
+    }
+
+    50% {
+      transform: scale(0.6);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  @keyframes rotatet {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
   span {
     color: #19191900;
     -webkit-text-stroke-width: 1px;
@@ -37,6 +61,7 @@ import testPic from "../assets/images/testPic.png";
     position: absolute;
     top: -3%;
     left: 50%;
+
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -59,17 +84,18 @@ import testPic from "../assets/images/testPic.png";
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(118, 118, 118, 0.3);
     backdrop-filter: blur(10px);
+    min-height: 35rem;
 
     &::before {
       content: "";
 
       background-image: url(/src/assets/icons/sun.svg);
-
+      animation: rotatet 7s infinite;
       width: 7rem;
       height: 7rem;
       position: absolute;
-      top: 85%;
-      left: 2%;
+      top: 80%;
+      left: -7%;
       transform: translate(-50%, -50%);
       display: flex;
       justify-content: center;
@@ -82,13 +108,13 @@ import testPic from "../assets/images/testPic.png";
       content: "";
 
       background-image: url(/src/assets/icons/smile.svg);
-
+      animation: zoomInAndOut 7s infinite;
       width: 10rem;
       height: 10rem;
       position: absolute;
-      top: 40%;
-      left: 86%;
-      transform: translate(-50%, -50%);
+      top: 25%;
+      left: 54%;
+      transform: translate(-73%, -50%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -96,17 +122,23 @@ import testPic from "../assets/images/testPic.png";
       background-repeat: no-repeat;
       color: white;
     }
+  }
 
-    img {
-      width: 100%;
-      object-fit: cover;
-      z-index: 4;
-      position: relative;
-    }
-    @media screen and (width < 800px) {
-      .hello_andreas {
-        display: none;
-      }
+  img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 4;
+    position: relative;
+    top: 0%;
+    left: 86%;
+    transform: translate(-87%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (width < 800px) {
+    .hello_andreas {
+      display: none;
     }
   }
 </style>
